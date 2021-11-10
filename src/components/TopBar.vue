@@ -17,7 +17,7 @@
   header {
     margin-left: -10px;
     margin-top: -10px;
-    margin-right: -10px;
+
     background: #0a0a0a;
     height: 75px;
   }

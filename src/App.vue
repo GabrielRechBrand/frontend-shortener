@@ -1,21 +1,11 @@
 <template>
   <div id="app" class="app">
-    <div class="top-nav">
-      <top-bar/>
-    </div>
-    <div class="page">
-      <box class="login-box"></box>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TopBar from "./components/TopBar";
-import Box from "./components/Box";
 
-  export default {
-    components: {TopBar, Box}
-  }
 </script>
 
 <style>
@@ -27,16 +17,41 @@ import Box from "./components/Box";
     background-attachment: fixed;
   }
 
-  .page div {
-    display: inline-block;
+  .page div+div {
     margin-top: 10px;
   }
 
-  .login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  /*.page {*/
+  /*  text-align: center;*/
+
+  /*}*/
+
+  /*.page-box {*/
+  /*  width: 50%;*/
+  /*  margin: 0 auto;*/
+  /*  height: 725px;*/
+  /*  border: 6px solid deepskyblue;*/
+  /*  padding: 25px;*/
+  /*  border-radius: 25px;*/
+  /*  font-family: "Arial Black";*/
+  /*  font-size: 12px;*/
+  /*  background-color: #0a0a0a;*/
+  /*  color: deepskyblue;*/
+  /*}*/
+
+  /*.login-box {*/
+  /*  position: absolute;*/
+  /*  top: 50%;*/
+  /*  left: 50%;*/
+  /*  transform: translate(-50%, -50%);*/
+  /*}*/
+
+  /*.page-enter, .page-leave-active {*/
+  /*  opacity: 0;*/
+  /*}*/
+
+  /*.page-enter-active, .page-leave-active {*/
+  /*  transition: opacity .4s;*/
+  /*}*/
 
 </style>

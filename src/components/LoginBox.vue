@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="login-box">
     <h1 class="login-title">LOGIN</h1>
     <div class="login">
       <div class="user">
@@ -15,12 +15,11 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
   export default {
-
+    name: "LoginBox",
     data() {
       return {
       }
@@ -37,7 +36,7 @@
 
 <style>
 
-  .box {
+  .login-box {
     width: 300px;
     height: 200px;
     border: 6px solid deepskyblue;
