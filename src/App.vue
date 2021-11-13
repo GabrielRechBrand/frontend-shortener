@@ -21,37 +21,44 @@
     margin-top: 10px;
   }
 
-  /*.page {*/
-  /*  text-align: center;*/
+  .page {
+    text-align: center;
 
-  /*}*/
+  }
 
-  /*.page-box {*/
-  /*  width: 50%;*/
-  /*  margin: 0 auto;*/
-  /*  height: 725px;*/
-  /*  border: 6px solid deepskyblue;*/
-  /*  padding: 25px;*/
-  /*  border-radius: 25px;*/
-  /*  font-family: "Arial Black";*/
-  /*  font-size: 12px;*/
-  /*  background-color: #0a0a0a;*/
-  /*  color: deepskyblue;*/
-  /*}*/
+  .page-box {
+    width: 50%;
+    margin: 0 auto;
+    height: 725px;
+    border: 6px solid deepskyblue;
+    padding: 25px;
+    border-radius: 25px;
+    font-family: "Arial Black";
+    font-size: 12px;
+    background-color: #0a0a0a;
+    color: deepskyblue;
+  }
 
-  /*.login-box {*/
-  /*  position: absolute;*/
-  /*  top: 50%;*/
-  /*  left: 50%;*/
-  /*  transform: translate(-50%, -50%);*/
-  /*}*/
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-  /*.page-enter, .page-leave-active {*/
-  /*  opacity: 0;*/
-  /*}*/
+  .regist-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-  /*.page-enter-active, .page-leave-active {*/
-  /*  transition: opacity .4s;*/
-  /*}*/
+  .page-enter, .page-leave-active {
+    opacity: 0;
+  }
+
+  .page-enter-active, .page-leave-active {
+    transition: opacity .4s;
+  }
 
 </style>

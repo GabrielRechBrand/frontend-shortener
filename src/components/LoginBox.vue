@@ -11,7 +11,7 @@
         <input type="password" placeholder="Type your password" id="password">
       </div>
       <div class="submit">
-        <input type="submit" value="Submit" v-on:click="getInputValue();">
+        <input type="submit" value="Submit" @click="getInputValue()">
       </div>
     </div>
   </div>
@@ -24,10 +24,10 @@
       return {
       }
     },
-    computed: {
+    methods: {
       getInputValue() {
-        var inputUsername = document.getElementById("username").value;
-        var inputPassword = document.getElementById("password").value;
+        const inputUsername = document.getElementById("username").value;
+        const inputPassword = document.getElementById("password").value;
         console.log(inputUsername, inputPassword)
       }
     }

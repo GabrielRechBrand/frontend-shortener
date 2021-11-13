@@ -1,12 +1,33 @@
 <template>
   <div class="shortened-urls">
     <h1>SHORTENED URLS:</h1>
+    <div class="url-list" v-for="url of urls">
+      <UrlBox :url="url" v-on:click.native="alertSelect()"></UrlBox>
+    </div>
   </div>
 </template>
 
 <script>
+import UrlBox from "./UrlBox";
 export default {
-  name: "ShortenedUrls"
+  name: "ShortenedUrls",
+  components: {UrlBox},
+  data() {
+    return {
+      urls: ['ALO']
+    }
+  },
+  created() {
+    this.$http.get('http://localhost:8080/test')
+      .then(res => res.json())
+      .then(urls => this.urls = urls, err => console.log(err));
+
+  },
+  methods: {
+    alertSelect() {
+
+    }
+  }
 }
 </script>
 
