@@ -1,6 +1,6 @@
 <template>
   <div class="url-box" :class="url.id === urlSelect ? 'url-select' : ''">
-    <h1 class="url-h1">{{url.alias}}</h1>
+    <h1 class="url-h1">{{url}}</h1>
   </div>
 </template>
 
