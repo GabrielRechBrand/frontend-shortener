@@ -2,14 +2,13 @@
   <div class="shortened-urls">
     <h1>SHORTENED URLS:</h1>
     <div class="url-list" v-for="url of urls" >
-      <UrlBox :url="url" v-on:click.native="selected()" id="urlbox"></UrlBox>
+      <UrlBox :url="url" :urlSelect="selectedUrl" v-on:click.native="select(url)" id="urlbox"></UrlBox>
     </div>
   </div>
 </template>
 
 <script>
 import UrlBox from "./UrlBox";
-import SelectedUrlBox from "./SelectedUrlBox";
 
 export default {
   name: "ShortenedUrls",
@@ -17,27 +16,18 @@ export default {
   data() {
     return {
       urls: [],
-      isSelected: false,
-      props: {
-        selectedUrl: ''
-      }
+      selectedUrl: ''
     }
   },
   created() {
-    this.$http.get('http://localhost:8080/test/')
+    this.$http.get('http://localhost:8080/urls/all')
       .then(res => res.json())
       .then(urls => this.urls = urls, err => console.log(err));
   },
   methods: {
-    selected() {
-      if(this.isSelected===false) {
-        document.getElementById('urlbox').style.cssText = "color: red";
-        this.isSelected = true;
-        this.props.selectedUrl = $UrlBox.url;
-      } else {
-        document.getElementById('urlbox').style.cssText = "color: deepskyblue"
-        this.isSelected = false;
-      }
+    select(url) {
+      this.selectedUrl = url.id;
+
     }
   }
 }

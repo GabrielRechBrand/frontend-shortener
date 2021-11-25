@@ -1,6 +1,6 @@
 <template>
-  <div class="url-box">
-    <h1 class="url-h1">{{url}}</h1>
+  <div class="url-box" :class="url.id === urlSelect ? 'url-select' : ''">
+    <h1 class="url-h1">{{url.alias}}</h1>
   </div>
 </template>
 
@@ -8,7 +8,8 @@
 export default {
   name: "UrlBox",
   props: {
-    url: ''
+    url: '',
+    urlSelect: '',
   },
 
 }
@@ -20,6 +21,10 @@ export default {
   font-size: 12px;
   background-color: #0a0a0a;
   color: deepskyblue;
+}
+
+.url-select {
+  color: red;
 }
 
 </style>

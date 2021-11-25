@@ -1,7 +1,6 @@
 <template>
   <div class="selected-url">
     <h1>SELECTED URL INFO:</h1>
-    <h1>{{selectedUrl}}</h1>
   </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
   components: {UrlBox},
   data() {
     return {
-      selectedUrl: ShortenedUrls.props.selectedUrl
+
     }
   }
 }
