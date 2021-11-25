@@ -1,14 +1,21 @@
 <template>
   <div class="selected-url">
     <h1>SELECTED URL INFO:</h1>
+    <h1>{{selectedUrl}}</h1>
   </div>
 </template>
 
 <script>
+import ShortenedUrls from "./ShortenedUrls"
+import UrlBox from "./UrlBox";
 export default {
   name: "SelectedUrlBox",
-
-
+  components: {UrlBox},
+  data() {
+    return {
+      selectedUrl: ShortenedUrls.props.selectedUrl
+    }
+  }
 }
 </script>
 

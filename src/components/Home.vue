@@ -7,11 +7,11 @@
       <div class="page-box">
         <div>
           <ShortenedUrls>
-
           </ShortenedUrls>
         </div>
         <div>
-          <SelectedUrlBox></SelectedUrlBox>
+          <SelectedUrlBox>
+          </SelectedUrlBox>
         </div>
       </div>
     </div>
