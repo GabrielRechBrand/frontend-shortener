@@ -1,25 +1,33 @@
 <template>
-  <div class="login-box">
-    <h1 class="login-title">LOGIN</h1>
-    <div class="login">
-      <div class="user">
-        <label>USERNAME:</label>
-        <input type="text"placeholder="Type your username" id="username">
-      </div>
-      <div class="password">
-        <label>PASSWORD:</label>
-        <input type="password" placeholder="Type your password" id="password">
-      </div>
-      <div class="submit">
-        <input type="submit" value="Submit" @click="getInputValue()">
+  <div>
+    <div class="top-nav">
+      <top-bar/>
+    </div>
+    <div class="login-box">
+      <h1 class="login-title">LOGIN</h1>
+      <div class="login">
+        <div class="user">
+          <label>USERNAME:</label>
+          <input type="text"placeholder="Type your username" id="username">
+        </div>
+        <div class="password">
+          <label>PASSWORD:</label>
+          <input type="password" placeholder="Type your password" id="password">
+        </div>
+        <div class="submit">
+          <input type="submit" value="Submit" @click="getInputValue()">
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import TopBar from "./TopBar";
+
   export default {
     name: "LoginBox",
+    components: {TopBar},
     data() {
       return {
       }

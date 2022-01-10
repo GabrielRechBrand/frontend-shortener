@@ -9,6 +9,7 @@
 
 <script>
 import UrlBox from "./UrlBox";
+import selectedUrl from "./SelectedUrl";
 
 export default {
   name: "ShortenedUrls",
@@ -16,7 +17,7 @@ export default {
   data() {
     return {
       urls: [],
-      selectedUrl: ''
+      selectedUrl: '',
     }
   },
   created() {
@@ -26,8 +27,8 @@ export default {
   },
   methods: {
     select(url) {
-      this.selectedUrl = url.id;
-
+      this.selectedUrl = url;
+      this.$emit('urlSelectEvent', this.selectedUrl)
     }
   }
 }
@@ -36,15 +37,34 @@ export default {
 <style scoped>
 
 .shortened-urls {
-    margin-top: -5px;
+    margin-top: -10px;
     width: 100%;
     height: 450px;
-    border: 2px solid deepskyblue;
-    border-radius: 25px;
+    border: 4px solid deepskyblue;
     font-family: "Arial Black";
     font-size: 12px;
     background-color: #0a0a0a;
     color: deepskyblue;
+    overflow: auto;
   }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 </style>

@@ -10,8 +10,8 @@
           </ShortenedUrls>
         </div>
         <div>
-          <SelectedUrlBox>
-          </SelectedUrlBox>
+          <SelectedUrl>
+          </SelectedUrl>
         </div>
       </div>
     </div>
@@ -19,17 +19,23 @@
 </template>
 
 <script>
+
 import TopBar from "./TopBar";
 import LoginBox from "./LoginBox";
-import SelectedUrlBox from "./SelectedUrlBox";
+import SelectedUrl from "./SelectedUrl";
 import ShortenedUrls from "./ShortenedUrls";
 
   export default {
     name: "Home",
-    components: {TopBar, LoginBox, SelectedUrlBox, ShortenedUrls},
+    components: {TopBar, LoginBox, SelectedUrl, ShortenedUrls},
   }
+
 </script>
 
 <style>
+
+  .page {
+    margin-top: 40px;
+  }
 
 </style>

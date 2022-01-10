@@ -1,5 +1,5 @@
 <template>
-  <div class="url-box" :class="url.id === urlSelect ? 'url-select' : ''">
+  <div class="url-box" :class="url.id === urlSelect.id ? 'url-select' : ''">
     <h1 class="url-h1">{{url}}</h1>
   </div>
 </template>
@@ -11,11 +11,11 @@ export default {
     url: '',
     urlSelect: '',
   },
-
 }
 </script>
 
 <style scoped>
+
 .url-box {
   font-family: "Arial Black";
   font-size: 12px;
