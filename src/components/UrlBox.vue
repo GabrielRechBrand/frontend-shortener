@@ -17,14 +17,17 @@ export default {
 <style scoped>
 
 .url-box {
-  font-family: "Arial Black";
-  font-size: 12px;
+  font-family: Arial;
+  font-size: 8px;
   background-color: #0a0a0a;
-  color: deepskyblue;
+  color: white;
 }
 
-.url-select {
-  color: red;
+
+
+.url-h1:hover {
+  color: grey;
+  font-family: bolder;
 }
 
 </style>

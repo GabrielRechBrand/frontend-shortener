@@ -1,6 +1,8 @@
 <template>
   <div class="shortened-urls">
-    <h1>SHORTENED URLS:</h1>
+    <header>
+      <h1 class="title">SHORTENED URLS:</h1>
+    </header>
     <div class="url-list" v-for="url of urls" >
       <UrlBox :url="url" :urlSelect="selectedUrl" v-on:click.native="select(url)" id="urlbox"></UrlBox>
     </div>
@@ -8,8 +10,9 @@
 </template>
 
 <script>
+
 import UrlBox from "./UrlBox";
-import selectedUrl from "./SelectedUrl";
+import EventBus from "../EventBus";
 
 export default {
   name: "ShortenedUrls",
@@ -28,7 +31,7 @@ export default {
   methods: {
     select(url) {
       this.selectedUrl = url;
-      this.$emit('urlSelectEvent', this.selectedUrl)
+      EventBus.$emit('urlSelectEvent', this.selectedUrl)
     }
   }
 }
@@ -36,17 +39,29 @@ export default {
 
 <style scoped>
 
-.shortened-urls {
+  header {
+    margin-top: -20px;
+    align-content: center;
+    height: 30px;
+    overflow: initial;
+  }
+
+  .shortened-urls {
     margin-top: -10px;
+    margin-left: -3.5px;
     width: 100%;
     height: 450px;
-    border: 4px solid deepskyblue;
+    border: 3px solid white;
     font-family: "Arial Black";
     font-size: 12px;
     background-color: #0a0a0a;
-    color: deepskyblue;
+    color: white;
     overflow: auto;
   }
+
+.title {
+    font-size: 25px;
+}
 
 ::-webkit-scrollbar {
   width: 10px;

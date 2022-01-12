@@ -41,7 +41,9 @@ export default {
     save() {
       // UrlService.save(this.urlForm);
       // console.log(this.urlForm);
-
+      document.getElementById("originalUrl").value = null;
+      document.getElementById("alias").value = null;
+      console.log(this.urlForm)
       this.$http.post('http://localhost:8080/', this.urlForm)
         .then(res => res.json())
         .then(res => console.log(res), err => console.log(err));
@@ -55,13 +57,13 @@ export default {
   .regist-box {
     width: 800px;
     height: 300px;
-    border: 6px solid deepskyblue;
+    border: 6px solid white;
     padding: 50px;
     border-radius: 25px;
     font-family: "Arial Black";
     font-size: 12px;
     background-color: #0a0a0a;
-    color: deepskyblue;
+    color: white;
   }
 
 </style>

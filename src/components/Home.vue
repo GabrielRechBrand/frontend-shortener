@@ -5,11 +5,11 @@
     </div>
     <div class="page">
       <div class="page-box">
-        <div>
+        <div class="shortened-urls">
           <ShortenedUrls>
           </ShortenedUrls>
         </div>
-        <div>
+        <div class="selected-url">
           <SelectedUrl>
           </SelectedUrl>
         </div>
@@ -24,10 +24,11 @@ import TopBar from "./TopBar";
 import LoginBox from "./LoginBox";
 import SelectedUrl from "./SelectedUrl";
 import ShortenedUrls from "./ShortenedUrls";
+import SelectedUrlBox from "./SelectedUrlBox";
 
   export default {
     name: "Home",
-    components: {TopBar, LoginBox, SelectedUrl, ShortenedUrls},
+    components: {SelectedUrlBox, TopBar, LoginBox, SelectedUrl, ShortenedUrls},
   }
 
 </script>

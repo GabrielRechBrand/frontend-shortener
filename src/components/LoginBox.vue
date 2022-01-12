@@ -15,7 +15,7 @@
           <input type="password" placeholder="Type your password" id="password">
         </div>
         <div class="submit">
-          <input type="submit" value="Submit" @click="getInputValue()">
+          <input type="submit" value="Submit" @click="submit()">
         </div>
       </div>
     </div>
@@ -33,10 +33,12 @@
       }
     },
     methods: {
-      getInputValue() {
+      submit() {
         const inputUsername = document.getElementById("username").value;
         const inputPassword = document.getElementById("password").value;
         console.log(inputUsername, inputPassword)
+        document.getElementById("username").value = null;
+        document.getElementById("password").value = null;
       }
     }
   }
@@ -47,13 +49,13 @@
   .login-box {
     width: 300px;
     height: 200px;
-    border: 6px solid deepskyblue;
+    border: 6px solid white;
     padding: 50px;
     border-radius: 25px;
     font-family: "Arial Black";
     font-size: 12px;
     background-color: #0a0a0a;
-    color: deepskyblue;
+    color: white;
   }
 
   .login-title {

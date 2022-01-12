@@ -11,10 +11,7 @@
 <style>
 
   body {
-    background: rgb(54,54,54);
-    background: linear-gradient(0deg, rgba(54,54,54,1) 0%, rgba(10,10,10,1) 88%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: #272727;
   }
 
   .page div+div {
@@ -30,13 +27,13 @@
     width: 50%;
     margin: 0 auto;
     height: 725px;
-    border: 6px solid deepskyblue;
+    border: 3px solid white;
     padding: 25px;
-    border-radius: 25px;
+    border-radius: 15px;
     font-family: "Arial Black";
     font-size: 12px;
     background-color: #0a0a0a;
-    color: deepskyblue;
+    color: white;
   }
 
   .login-box {
