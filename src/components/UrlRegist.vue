@@ -4,14 +4,16 @@
       <top-bar/>
     </div>
     <div class="regist-box">
-      <h1>REGISTER YOUR URL</h1>
+      <header class="regist-topbar">
+        <h1 class="title">REGISTER YOUR URL</h1>
+      </header>
       <div class="form">
         <div>
-          <h1>Insert the URL you want to be shortened</h1>
+          <h1>Insert the URL you want to be shortened:</h1>
           <input type="text" placeholder="Original Url" id="originalUrl" v-model="urlForm.originalUrl">
         </div>
         <div>
-          <h1>Insert the alias you want for it</h1>
+          <h1>Insert the alias you want for it:</h1>
           <input type="text" placeholder="Url alias" id="alias" v-model="urlForm.alias">
         </div>
         <div>
@@ -24,8 +26,9 @@
 </template>
 
 <script>
-import UrlService from "../UrlService";
+
 import TopBar from "./TopBar";
+
 export default {
   name: "UrlRegist",
   components: {TopBar},
@@ -59,11 +62,49 @@ export default {
     height: 300px;
     border: 6px solid white;
     padding: 50px;
-    border-radius: 25px;
-    font-family: "Arial Black";
+    font-family: Arial;
     font-size: 12px;
     background-color: #0a0a0a;
     color: white;
+    position: absolute;
+  }
+
+  .regist-box {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .regist-topbar {
+    margin-top: -60px;
+    margin-left: -50px;
+    align-content: center;
+    height: 30px;
+    overflow: initial;
+    width: 900px;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-family: Arial;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    margin-top: 80px;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 </style>

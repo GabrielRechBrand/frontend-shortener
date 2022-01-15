@@ -1,6 +1,6 @@
 <template>
   <div class="url-box" :class="url.id === urlSelect.id ? 'url-select' : ''">
-    <h1 class="url-h1">{{url}}</h1>
+    <h1 class="url-h1">{{url.shortenedUrl}}</h1>
   </div>
 </template>
 
@@ -23,11 +23,12 @@ export default {
   color: white;
 }
 
-
-
 .url-h1:hover {
   color: grey;
-  font-family: bolder;
+  font-weight: bolder;
 }
 
+.url-select {
+  border: 2px solid grey;
+}
 </style>

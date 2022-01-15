@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div>
     <div class="top-nav">
       <top-bar/>
@@ -16,6 +17,7 @@
       </div>
     </div>
   </div>
+  </body>
 </template>
 
 <script>
@@ -37,6 +39,21 @@ import SelectedUrlBox from "./SelectedUrlBox";
 
   .page {
     margin-top: 40px;
+  }
+
+  .page {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 </style>

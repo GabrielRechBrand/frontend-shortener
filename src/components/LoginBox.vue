@@ -4,7 +4,9 @@
       <top-bar/>
     </div>
     <div class="login-box">
-      <h1 class="login-title">LOGIN</h1>
+      <header class="regist-topbar">
+        <h1 class="title">LOGIN</h1>
+      </header>
       <div class="login">
         <div class="user">
           <label>USERNAME:</label>
@@ -23,7 +25,8 @@
 </template>
 
 <script>
-  import TopBar from "./TopBar";
+
+import TopBar from "./TopBar";
 
   export default {
     name: "LoginBox",
@@ -51,24 +54,56 @@
     height: 200px;
     border: 6px solid white;
     padding: 50px;
-    border-radius: 25px;
-    font-family: "Arial Black";
+    font-family: Arial;
     font-size: 12px;
     background-color: #0a0a0a;
     color: white;
   }
 
-  .login-title {
-      text-align:center;
+  .login {
+    margin-top: 80px;
   }
 
   .submit {
-    margin: 0;
     position: absolute;
-    top: 75%;
+    margin-top: 20px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+
+  .regist-topbar {
+    margin-top: -60px;
+    margin-left: -50px;
+    align-content: center;
+    height: 30px;
+    overflow: initial;
+    width: 400px;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-family: Arial;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-box {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 </style>

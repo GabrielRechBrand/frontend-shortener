@@ -1,7 +1,7 @@
 <template>
   <div class="shortened-urls">
     <header>
-      <h1 class="title">SHORTENED URLS:</h1>
+      <h1 class="title">SHORTENED URLS</h1>
     </header>
     <div class="url-list" v-for="url of urls" >
       <UrlBox :url="url" :urlSelect="selectedUrl" v-on:click.native="select(url)" id="urlbox"></UrlBox>
@@ -24,14 +24,23 @@ export default {
     }
   },
   created() {
-    this.$http.get('http://localhost:8080/urls/all')
-      .then(res => res.json())
-      .then(urls => this.urls = urls, err => console.log(err));
+    this.refreshUrls()
+  },
+  mounted() {
+
+  },
+  destroyed() {
+    EventBus.$off('refreshEvent')
   },
   methods: {
     select(url) {
       this.selectedUrl = url;
       EventBus.$emit('urlSelectEvent', this.selectedUrl)
+    },
+    refreshUrls() {
+      this.$http.get('http://localhost:8080/urls/all')
+        .then(res => res.json())
+        .then(urls => this.urls = urls, err => console.log(err));
     }
   }
 }
@@ -52,16 +61,24 @@ export default {
     width: 100%;
     height: 450px;
     border: 3px solid white;
-    font-family: "Arial Black";
+    font-family: Arial;
     font-size: 12px;
     background-color: #0a0a0a;
     color: white;
-    overflow: auto;
+    overflow-y: scroll;
   }
 
-.title {
-    font-size: 25px;
-}
+
+  .title {
+    margin-top: 20px;
+    font-family: Arial;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 
 ::-webkit-scrollbar {
   width: 10px;
