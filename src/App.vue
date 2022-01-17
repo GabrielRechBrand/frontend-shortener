@@ -14,10 +14,6 @@
     background: #272727;
   }
 
-  .page div+div {
-    margin-top: 10px;
-  }
-
   .page {
     text-align: center;
 

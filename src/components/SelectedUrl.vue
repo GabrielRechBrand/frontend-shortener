@@ -6,13 +6,15 @@
       </header>
       <div class="icons">
         <div class="deleteDiv" @click="deleteUrl()">
-          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" class="deleteUrlImg">
+          <img src="src/assets/deleteIcon.png" class="deleteUrlImg">
         </div>
         <div class="editDiv" @click="editUrl()">
-          <img src="https://cdn-icons.flaticon.com/png/512/5996/premium/5996831.png?token=exp=1642285803~hmac=50b082c8a779c4e2472b647dbf21cfea" class="editUrlImg">
+          <img src="src/assets/editIcon.png" class="editUrlImg">
         </div>
       </div>
-    <SelectedUrlBox :selected-url="selectedUrl"></SelectedUrlBox>
+      <div class="selected-url-box">
+        <SelectedUrlBox :selected-url="selectedUrl"></SelectedUrlBox>
+      </div>
     </div>
   </div>
 </template>
@@ -66,6 +68,9 @@ export default {
     word-wrap: break-word;
   }
 
+  .selected-url-box {
+    margin-top: -40px;
+  }
   header {
     margin-top: -20px;
     align-content: center;
@@ -126,26 +131,38 @@ export default {
   /*}*/
 
   .icons {
-    display: block;
-  }
-
-  .deleteUrlImg:hover {
-    border-radius: 25px;
-    border: 5px solid #eb4034;
+    margin: auto;
+    width: 50%;
   }
 
   .deleteUrlImg {
-    width: 20px;
+    width: 25px;
   }
 
-  .editUrlImg:hover {
-    border-radius: 25px;
-    border: 5px solid #4287f5;
+  .deleteDiv {
+    min-width: 25px;
+    min-height: 25px;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  .deleteUrlImg:hover {
+    width: 30px;
   }
 
   .editUrlImg {
     width: 25px;
   }
 
+  .editDiv {
+    min-width: 25px;
+    min-height: 25px;
+    padding: 13px;
+    display: inline-block;
+  }
+
+  .editUrlImg:hover {
+    width: 30px;
+  }
 
 </style>

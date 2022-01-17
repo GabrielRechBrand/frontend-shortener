@@ -26,7 +26,7 @@
     </div>
     <div>
       <h1>Shortened URL: </h1>
-      <a :href="selectedUrl.shortenedUrl">{{selectedUrl.shortenedUrl}}</a>
+      <a :href="selectedUrl.shortenedUrl"><h2>{{selectedUrl.shortenedUrl}}</h2></a>
     </div>
     <div>
       <h1>Creator ID: </h1>
@@ -46,12 +46,26 @@ export default {
 <style scoped>
 
   .info {
-    font-size: 8px;
     display: inline;
+  }
+
+  div {
+    padding: 20px;
+    min-width: 25px;
+    min-height: 25px;
   }
 
   a {
     color: darkred;
   }
 
+  h1 {
+    border: 2px solid white;
+    font-size: 20px;
+    background: #1D1D1D;
+  }
+
+  h2 {
+    margin-bottom: -40px;
+  }
 </style>

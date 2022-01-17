@@ -18,9 +18,11 @@ export default {
 
 .url-box {
   font-family: Arial;
-  font-size: 8px;
+  font-size: 10px;
   background-color: #0a0a0a;
   color: white;
+  border: 2px solid grey;
+  cursor: pointer;
 }
 
 .url-h1:hover {
@@ -29,6 +31,6 @@ export default {
 }
 
 .url-select {
-  border: 2px solid grey;
+  border: 2px solid dimgrey;
 }
 </style>

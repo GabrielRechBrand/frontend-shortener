@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header-title">
-      <h1 class="h1-title">URL SHORTENER</h1>
+      <a href="/" style="text-decoration: none;"><h1 class="h1-title">URL SHORTENER</h1></a>
       <div class="redirects">
         <router-link to="/">Home</router-link>
         |

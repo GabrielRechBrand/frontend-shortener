@@ -41,6 +41,10 @@ import SelectedUrlBox from "./SelectedUrlBox";
     margin-top: 40px;
   }
 
+  .selected-url {
+    margin-top: 10px;
+  }
+
   .page {
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
