@@ -26,12 +26,7 @@ export default {
   created() {
     this.refreshUrls()
   },
-  mounted() {
 
-  },
-  destroyed() {
-    EventBus.$off('refreshEvent')
-  },
   methods: {
     select(url) {
       this.selectedUrl = url;
@@ -68,10 +63,10 @@ export default {
     overflow-y: scroll;
   }
 
-
   .title {
     margin-top: 20px;
     font-family: Arial;
+    text-shadow: 1px 1px #000;
     color: white;
     height: 100%;
     display: flex;

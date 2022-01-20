@@ -23,14 +23,23 @@ export default {
   color: white;
   border: 2px solid grey;
   cursor: pointer;
+
 }
 
 .url-h1:hover {
-  color: grey;
   font-weight: bolder;
+  font-size: 21px;
 }
 
 .url-select {
   border: 2px solid dimgrey;
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #1D1D1D 10px,
+    #1D1D1D 20px
+  );
+  color: #f0da3a;
 }
 </style>

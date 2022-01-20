@@ -8,9 +8,11 @@
         <div class="deleteDiv" @click="deleteUrl()">
           <img src="src/assets/deleteIcon.png" class="deleteUrlImg">
         </div>
-        <div class="editDiv" @click="editUrl()">
-          <img src="src/assets/editIcon.png" class="editUrlImg">
-        </div>
+        <router-link :to="this.editRedirect">
+          <div class="editDiv" @click="editUrl()">
+            <img src="src/assets/editIcon.png" class="editUrlImg">
+          </div>
+        </router-link>
       </div>
       <div class="selected-url-box">
         <SelectedUrlBox :selected-url="selectedUrl"></SelectedUrlBox>
@@ -33,7 +35,9 @@ export default {
   },
   data() {
     return {
-        selectedUrl: {}
+        selectedUrl: {},
+        urlForm: {},
+        editRedirect: ''
     }
   },
   mounted() {
@@ -47,13 +51,21 @@ export default {
       this.selectedUrl = url;
     },
     deleteUrl() {
-      console.log("http://localhost:8080/" + this.selectedUrl.alias)
-      this.$http.delete("http://localhost:8080/" + this.selectedUrl.alias)
-      EventBus.$emit('refreshEvent', "Event")
+      if(this.selectedUrl.id !== undefined) {
+        this.$http.delete("http://localhost:8080/" + this.selectedUrl.alias)
+        location.reload();
+      } else {
+        alert("You can't delete when tere is no URL selected.")
+      }
     },
     editUrl() {
-      console.log("Edit")
-    }
+      if(this.selectedUrl.id !== undefined) {
+        this.editRedirect = "/UrlEdit/" + this.selectedUrl.id
+      } else {
+        alert("You can't edit when there is no URL selected.")
+        this.editRedirect = "/"
+      }
+    },
   },
 
 }
@@ -71,6 +83,7 @@ export default {
   .selected-url-box {
     margin-top: -40px;
   }
+
   header {
     margin-top: -20px;
     align-content: center;
@@ -98,6 +111,7 @@ export default {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    text-shadow: 1px 1px #000;
   }
 
   ::-webkit-scrollbar {

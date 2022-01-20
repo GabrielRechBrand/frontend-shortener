@@ -9,11 +9,11 @@
       </header>
       <div class="login">
         <div class="user">
-          <label>USERNAME:</label>
+          <h3>USERNAME:</h3>
           <input type="text"placeholder="Type your username" id="username">
         </div>
         <div class="password">
-          <label>PASSWORD:</label>
+          <h3>PASSWORD:</h3>
           <input type="password" placeholder="Type your password" id="password">
         </div>
         <div class="submit">
@@ -61,15 +61,11 @@ import TopBar from "./TopBar";
   }
 
   .login {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   .submit {
-    position: absolute;
     margin-top: 20px;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
   }
 
   .regist-topbar {

@@ -9,11 +9,11 @@
       </header>
       <div class="form">
         <div>
-          <h1>Insert the URL you want to be shortened:</h1>
+          <h2>Insert the URL you want to be shortened:</h2>
           <input type="text" placeholder="Original Url" id="originalUrl" v-model="urlForm.originalUrl">
         </div>
         <div>
-          <h1>Insert the alias you want for it:</h1>
+          <h2>Insert the alias you want for it:</h2>
           <input type="text" placeholder="Url alias" id="alias" v-model="urlForm.alias">
         </div>
         <div>
@@ -34,9 +34,7 @@ export default {
   components: {TopBar},
   data(){
     return {
-      urlForm: {
-
-      }
+      urlForm: {}
     }
   },
 

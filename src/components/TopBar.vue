@@ -35,7 +35,7 @@
   .header-title {
     margin-top: 10px;
     font-family: Arial;
-    color: white;
+    color: black;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -43,18 +43,25 @@
     align-items: center;
   }
 
+  .h1-title {
+    margin-top: 25px;
+    background: #f0da3a;
+  }
+
   .redirects {
     margin-top: -10px;
     margin-bottom: 25px;
+    background: #f0da3a;
   }
 
   a {
-    color: white;
+    color: black;
+    text-decoration: none;
   }
 
   a:hover {
     font-weight: bolder;
-    color: white;
+    color: black;
   }
 
 </style>
